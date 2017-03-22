@@ -8,7 +8,7 @@ require 'selenium-webdriver'
 
 
 Given(/^open the site$/) do
-  @browser = Watir::Browser.new :ie
+  @browser = Watir::Browser.new :chrome
     @browser.window.maximize
   # @browser.goto 'https://storefront:kt2017@development-store-kaltire.demandware.net/s/Kaltire/home'
   @browser.goto 'https://staging-store-kaltire.demandware.net/s/Kaltire/home'

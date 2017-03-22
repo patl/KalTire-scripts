@@ -18,14 +18,14 @@ Feature: Check the create account functionality
     Then press on Log Out
     And close the browser
 
-  Scenario Outline: Check validations for fields
+  Scenario: Check validations for fields
     #check validation for blank fields
     Then user press on create account button
     And Verify validation messaged for each fields should be "Please enter.."
 
     #check validation for special symbols in First and last name
-    Then Type First name with incorrect values like: '!@#$%^'
-    Then Type last name with incorrece values like: '!@#$%^'
+    Then Type fierst name with incorrect values like: !@#$%
+    Then Type last name with incorrece values like: #$
     And user feels the Email with correct data
     And user feels the Password1 with valid data
     And user feels the Password2 with valid data

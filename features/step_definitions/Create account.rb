@@ -48,3 +48,15 @@ Then(/^press on Log Out$/) do
   @browser.element(:css, ".link>a").wait_until_present.click
 end
 
+
+And(/^Verify validation messaged for each fields should be "([^"]*)"$/) do |arg|
+  pending
+end
+
+Then(/^Type (.*) name with incorrect values like: (.*)$/) do |field, value|
+  pending
+end
+
+Then(/^Type (.*) name with incorrece values like: (.*)$/) do |field, value|
+  @browser.text_field(:id, "dwfrm_profile_customer_firstname").send_keys(@value)
+end
