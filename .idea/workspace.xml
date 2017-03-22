@@ -35,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Create account.feature" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Create account.feature" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/My account/Create account.feature">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -55,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common steps.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common steps.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/step_definitions/common steps.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -84,8 +84,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="216" />
-    <option name="y" value="121" />
+    <option name="x" value="154" />
+    <option name="y" value="130" />
     <option name="width" value="1694" />
     <option name="height" value="1056" />
   </component>
@@ -362,7 +362,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1490159715383</updated>
-      <workItem from="1490159716843" duration="3669000" />
+      <workItem from="1490159716843" duration="4981000" />
     </task>
     <servers />
   </component>
@@ -393,10 +393,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3669000" />
+    <option name="totallyTimeSpent" value="4981000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="216" y="121" width="1694" height="1056" extended-state="0" />
+    <frame x="154" y="130" width="1694" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2870257" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -442,14 +442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/My account/Create account.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -462,6 +454,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/My account/Create account.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
           <folding />
         </state>
       </provider>
