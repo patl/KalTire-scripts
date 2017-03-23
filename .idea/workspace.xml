@@ -89,9 +89,15 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
+    <option name="x" value="154" />
+    <option name="y" value="130" />
+    <option name="width" value="1694" />
+=======
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
+>>>>>>> origin/master
     <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
@@ -376,9 +382,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1490159715383</updated>
+<<<<<<< HEAD
+      <workItem from="1490159716843" duration="4981000" />
+=======
       <workItem from="1490159716843" duration="3669000" />
       <workItem from="1490169169351" duration="3307000" />
+<<<<<<< HEAD
       <workItem from="1490174438883" duration="2681000" />
+=======
+      <workItem from="1490174438883" duration="2148000" />
+>>>>>>> origin/master
+>>>>>>> origin/master
     </task>
     <servers />
   </component>
@@ -412,10 +426,21 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="9657000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="4981000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="154" y="130" width="1694" height="1056" extended-state="0" />
+=======
+    <option name="totallyTimeSpent" value="9124000" />
+>>>>>>> origin/master
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+>>>>>>> origin/master
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2563966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -496,6 +521,8 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/features/My account/Create account.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -520,6 +547,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -548,6 +576,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="30" column="48" lean-forward="true" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/My account/Create account.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
           <folding />
         </state>
       </provider>
