@@ -1,17 +1,18 @@
+require 'selenium-webdriver'
 require 'cucumber'
 require 'rspec'
 require 'watir'
-require 'selenium-webdriver'
+
 
 
 
 
 
 Given(/^open the site$/) do
-  @browser = Watir::Browser.new :ff
-    @browser.window.maximize
-  @browser.goto 'https://storefront:kt2017@development-store-kaltire.demandware.net/s/Kaltire/home'
-  #@browser.goto 'https://staging-store-kaltire.demandware.net/s/Kaltire/home'
+  @browser = Watir::Browser.new :chrome
+  @browser.window.maximize
+  #browser.goto 'https://storefront:kt2017@development-store-kaltire.demandware.net/s/Kaltire/home'
+  @browser.goto 'https://staging-store-kaltire.demandware.net/s/Kaltire/home'
   begin
     alert = @browser.alert.exists?
     if alert == true
@@ -36,6 +37,13 @@ Given(/^open the site$/) do
   tire_width_row = [('1'..'9')].map { |i| i.to_a }.flatten
   @tire_width_row = (0..0).map { tire_width_row[rand(tire_width_row.length)] }.join
 
+  #Generate random pass/email
+  o = [('a'..'z')].map { |i| i.to_a }.flatten
+  @name1 = (0...5).map { o[rand(o.length)] }.join
+  @name2 = (0...5).map { o[rand(o.length)] }.join
+  @email = (0...5).map { o[rand(o.length)] }.join
+  @pass = (0...10).map { o[rand(o.length)] }.join
+  @pass1 = (0...10).map { o[rand(o.length)] }.join
 end
 
 When(/^user press on 'Log in' from header$/) do

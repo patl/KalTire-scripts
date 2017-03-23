@@ -1,13 +1,7 @@
 Then(/^user press on create account button$/) do
   @browser.button(:name, "dwfrm_login_register").wait_until_present.click
 
-  #Generate random pass/email
-  o = [('a'..'z')].map { |i| i.to_a }.flatten
-  @name1 = (0...5).map { o[rand(o.length)] }.join
-  @name2 = (0...5).map { o[rand(o.length)] }.join
-  @email = (0...5).map { o[rand(o.length)] }.join
-  @pass = (0...10).map { o[rand(o.length)] }.join
-  @pass1 = (0...10).map { o[rand(o.length)] }.join
+
 end
 
 When(/^user is on Create account page$/) do

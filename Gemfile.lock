@@ -47,7 +47,7 @@ PLATFORMS
 DEPENDENCIES
   cucumber
   rspec
-  selenium-webdriver
+  selenium-webdriver (~> 3.3)
   watir
 
 BUNDLED WITH

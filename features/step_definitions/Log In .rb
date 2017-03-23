@@ -1,12 +1,12 @@
 And(/^user fills password on login page$/) do
-  @browser.element(:id, "dwfrm_login_username").clear
-  @browser.element(:id, "dwfrm_login_username").send_keys "ogboiko@gmail.com"
 
+  @browser.text_field(:id, "dwfrm_login_password").clear
+  @browser.text_field(:id, "dwfrm_login_password").send_keys "ogboiko@gmail.com"
 end
 
 And(/^user fills the Email on login page$/) do
-  @browser.element(:id, "dwfrm_login_password").clear
-  @browser.element(:id, "dwfrm_login_password").send_keys "ogboiko@gmail.com"
+  @browser.text_field(:id, "dwfrm_login_username").clear
+  @browser.text_field(:id, "dwfrm_login_username").send_keys "ogboiko@gmail.com"
 end
 
 And(/^he press on Log In button from Log In page$/) do
@@ -27,7 +27,7 @@ And(/^verify the validation message for Password$/) do
 end
 
 Then(/^Entered incorrect password <7$/) do
-  @browser.element(:id, "dwfrm_login_password").send_keys "123456"
+  @browser.text_field(:id, "dwfrm_login_password").send_keys "123456"
   
 end
 
@@ -36,13 +36,13 @@ When(/^validation message is displayed Please enter a password between 7-20 char
 end
 
 Then(/^entered incorrect password >20$/) do
-  @browser.element(:id, "dwfrm_login_password").clear
-  @browser.element(:id, "dwfrm_login_password").send_keys "12345678912345678912345678"
+  @browser.text_field(:id, "dwfrm_login_password").clear
+  @browser.text_field(:id, "dwfrm_login_password").send_keys "12345678912345678912345678"
 end
 
 And(/^fills the email on Login page with incorrect email ogboiko@$/) do
-  @browser.element(:id, "dwfrm_login_username").clear
-  @browser.element(:id, "dwfrm_login_username").send_keys "ogboiko@"
+  @browser.text_field(:id, "dwfrm_login_username").clear
+  @browser.text_field(:id, "dwfrm_login_username").send_keys "ogboiko@"
 end
 
 And(/^verify error message  Please enter a valid email address$/) do
@@ -50,8 +50,8 @@ And(/^verify error message  Please enter a valid email address$/) do
 end
 
 Then(/^fills the email on login page with non existing email in the system$/) do
-  @browser.element(:id, "dwfrm_login_username").clear
-  @browser.element(:id, "dwfrm_login_username").send_keys "hsdgkahsgdka@asdasd.asd"
+  @browser.text_field(:id, "dwfrm_login_username").clear
+  @browser.text_field(:id, "dwfrm_login_username").send_keys "hsdgkahsgdka@asdasd.asd"
 end
 
 And(/^verify the error message Sorry, this does not match our records\. Check your spelling and try again\.$/) do
