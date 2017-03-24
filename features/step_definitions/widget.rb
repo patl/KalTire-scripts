@@ -196,7 +196,7 @@ Then(/^select Size for wheels by vehicle$/) do
 end
 
 And(/^verify that CLP is open$/) do
-  @browser.element(:class, 'page-title').text =='SHOP WHEELS' || "SEARCH RESULTS"
+  @browser.element(:class, 'page-title').text =='SHOP WHEELS' || "SEARCH RESULTS" || "SHOP TIRES"
 end
 
 And(/^verify searching car by Year and Make for wheels$/) do
@@ -247,4 +247,109 @@ And(/^verify searching Wheels size$/) do
     end
   rescue Selenium::WebDriver::Error::NoSuchElementError
   end
+end
+
+#Selling path
+Then(/^user selects the Year for tires by vehicle 2015$/) do
+  sleep(2)
+  @browser.element(:xpath, "(//a[contains(text(),2015)])[2]").click
+end
+
+Then(/^user selects Make for tires by vehicle Subaru$/) do
+  sleep(2)
+  @browser.element(:xpath, "html/body/div[1]/div[4]/div[2]/div[2]/div/div/div[2]/div/ul/li[1]/ul/li/div/div[3]/div[4]/div[2]/div/ul/li/div/ul[5]/li[4]/a").click
+end
+
+Then(/^user selects Model for tires by vehicle Forester$/) do
+  sleep(2)
+  @browser.element(:xpath, "html/body/div[1]/div[4]/div[2]/div[2]/div/div/div[2]/div/ul/li[1]/ul/li/div/div[3]/div[4]/div[3]/div/ul/li/div/ul/li[2]/a").click
+end
+
+Then(/^user selects Option for tires by vehicle 2.0XT$/) do 
+  sleep(2)
+  @browser.element(:xpath, "html/body/div[1]/div[4]/div[2]/div[2]/div/div/div[2]/div/ul/li[1]/ul/li/div/div[3]/div[4]/div[5]/div/ul/li/div/ul/li/a").click
+end
+
+
+Then(/^press on Get Started button$/) do
+  @browser.element(:id, "gspStartCTA").click
+ end
+
+And(/^verify that question 1 is displayed: Which road conditions will you be driving on with these tires$/) do
+  @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div/div").text == "1\nWhich road conditions will you be driving on with these tires?"
+end
+
+Then(/^user selects Dry pavement$/) do
+  @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li").click
+
+end
+
+Then(/^user selects Rain$/) do
+  @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li[2]").click
+
+end
+
+Then(/^user selects Ice\/Snow\/Slush$/) do
+  @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li[3]").click
+
+end
+
+Then(/^user selects Gravel$/) do
+  @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li[4]").click
+
+end
+
+Then(/^user selects Heavy Mud$/) do
+  @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li[5]").click
+ end
+
+And(/^preses on Next button for Qs$/) do
+  sleep(2)
+  @browser.element(:id, "gspNextAction").click
+end
+
+When(/^user is on Q2:  Do you currently put on different tires for the winter\?$/) do
+  @browser.element(:css, "div.large-10.columns").text== "2\nDo you currently put on different tires for the winter?"
+
+end
+
+Then(/^select Yes I swap to winter\.\.\.$/) do
+  @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li").click
+end
+
+
+And(/^verify that Winter tires are displayed Based in your responses, we recommend Winter tires$/) do
+  @browser.element(:css, "h4").text == "Based in your responses, we recommend Winter tires."
+end
+
+And(/^verify that Winter tires are displayed in Grid$/) do
+  @browser.element(:css, "div.category.cat-winter").text == "Winter"
+end
+
+Then(/^press on Change my responses$/) do
+  @browser.element(:link_text, "< Change my Responses").click
+end
+
+Then(/^select No My vehicle has one$/) do
+  @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li[2]").click
+end
+
+Then(/^Verify that Q3 is displayed  In Canada, we recommend changing your tires for the winter to provide superior driving performance in winter road conditions$/) do
+  @browser.element(:css, "div.large-10.columns").text == "3\nIn Canada, we recommend changing your tires for the winter to provide superior driving performance in winter road conditions."
+end
+
+When(/^user selects Show me winter tire$/) do
+  @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li/p").click
+end
+
+When(/^user selects Show me Alternatives$/) do
+  @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li[2]/img").click
+end
+
+And(/^verify that All Weather tires are displayed Based in your responses, we recommend All Weather tires\.$/) do
+  @browser.element(:xpath, "//div[@id='results-info-from-gsp']/div/div/h4").text == "Based in your responses, we recommend All Weather tires."
+end
+
+And(/^verify that All Weather tires are displayed in Grid$/) do
+  @browser.element(:css, ".category.cat-all-weather").text == "All-weather"
 end
