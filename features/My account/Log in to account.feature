@@ -1,4 +1,4 @@
-Feature: Log in to My account and check the order history
+Feature: Check the Log In section on my acc
 Background:
   Given open the site
   When user press on 'Log in' from header

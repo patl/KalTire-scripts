@@ -4,15 +4,11 @@ require 'rspec'
 require 'watir'
 
 
-
-
-
-
 Given(/^open the site$/) do
-  @browser = Watir::Browser.new :chrome
+  @browser = Watir::Browser.new :ff
   @browser.window.maximize
-  #browser.goto 'https://storefront:kt2017@development-store-kaltire.demandware.net/s/Kaltire/home'
-  @browser.goto 'https://staging-store-kaltire.demandware.net/s/Kaltire/home'
+  @browser.goto 'https://storefront:kt2017@development-store-kaltire.demandware.net/s/Kaltire/home'
+  #@browser.goto 'https://staging-store-kaltire.demandware.net/s/Kaltire/home'
   begin
     alert = @browser.alert.exists?
     if alert == true
@@ -21,8 +17,7 @@ Given(/^open the site$/) do
       p 'no alert'
     end
   end
-
-  year = [('1980'..'2017')].map { |i| i.to_a }.flatten
+   year = [('1980'..'2017')].map { |i| i.to_a }.flatten
   @year = (0..0).map { year[rand(year.length)] }.join
 
   make_column = [('1'..'5')].map { |i| i.to_a }.flatten
@@ -36,6 +31,12 @@ Given(/^open the site$/) do
 
   tire_width_row = [('1'..'9')].map { |i| i.to_a }.flatten
   @tire_width_row = (0..0).map { tire_width_row[rand(tire_width_row.length)] }.join
+
+  bolt_pattern_c = [('1'..'3')].map { |i| i.to_a }.flatten
+  @bolt_pattern_c = (0..0).map { bolt_pattern_c[rand(bolt_pattern_c.length)] }.join
+
+  bolt_pattern_r = [('1'..'9')].map { |i| i.to_a }.flatten
+  @bolt_pattern_r = (0..0).map { bolt_pattern_r[rand(bolt_pattern_r.length)] }.join
 
   #Generate random pass/email
   o = [('a'..'z')].map { |i| i.to_a }.flatten
