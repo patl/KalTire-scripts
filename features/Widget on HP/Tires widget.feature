@@ -47,7 +47,7 @@ Feature: Tires By Vehicle
 
       #Q2
       When user is on Q2:  Do you currently put on different tires for the winter?
-      Then select Yes I swap to winter...
+      Then select Yes I swap to winter
       And preses on Next button for Qs
 
       #Result after Yes I swap to winter

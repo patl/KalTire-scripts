@@ -309,16 +309,18 @@ And(/^preses on Next button for Qs$/) do
 end
 
 When(/^user is on Q2:  Do you currently put on different tires for the winter\?$/) do
+  sleep(2)
   @browser.element(:css, "div.large-10.columns").text== "2\nDo you currently put on different tires for the winter?"
 
 end
 
-Then(/^select Yes I swap to winter\.\.\.$/) do
+Then(/^select Yes I swap to winter$/) do
   @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li").click
 end
 
 
 And(/^verify that Winter tires are displayed Based in your responses, we recommend Winter tires$/) do
+  sleep(3)
   @browser.element(:css, "h4").text == "Based in your responses, we recommend Winter tires."
 end
 
@@ -327,7 +329,7 @@ And(/^verify that Winter tires are displayed in Grid$/) do
 end
 
 Then(/^press on Change my responses$/) do
-  @browser.element(:link_text, "< Change my Responses").click
+  @browser.element(:link_text, "< Change my Responses").when_present.click
 end
 
 Then(/^select No My vehicle has one$/) do

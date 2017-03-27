@@ -24,4 +24,4 @@ Feature: Wheels By Vehicle and Wheels by Size
     And verify that CLP is open
     And verify searching Wheels size
 
-    Scenario: 
+    Scenario:

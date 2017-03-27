@@ -5,10 +5,11 @@ require 'watir'
 
 
 Given(/^open the site$/) do
-  @browser = Watir::Browser.new :ff
+  @browser = Watir::Browser.new :chrome
+  @browser.cookies.clear
   @browser.window.maximize
-  @browser.goto 'https://storefront:kt2017@development-store-kaltire.demandware.net/s/Kaltire/home'
-  #@browser.goto 'https://staging-store-kaltire.demandware.net/s/Kaltire/home'
+  #@browser.goto 'https://storefront:kt2017@development-store-kaltire.demandware.net/s/Kaltire/home'
+  @browser.goto 'https://staging-store-kaltire.demandware.net/s/Kaltire/home'
   begin
     alert = @browser.alert.exists?
     if alert == true
@@ -38,6 +39,13 @@ Given(/^open the site$/) do
   bolt_pattern_r = [('1'..'9')].map { |i| i.to_a }.flatten
   @bolt_pattern_r = (0..0).map { bolt_pattern_r[rand(bolt_pattern_r.length)] }.join
 
+  brand_option_w = [('1'..'9')].map { |i| i.to_a }.flatten
+  @brand_option_w = (0..0).map { brand_option_w[rand(brand_option_w.length)] }.join
+
+  diameter = [('13'..'22')].map { |i| i.to_a }.flatten
+  @diameter= (0..0).map { diameter[rand(diameter.length)] }.join
+
+
   #Generate random pass/email
   o = [('a'..'z')].map { |i| i.to_a }.flatten
   @name1 = (0...5).map { o[rand(o.length)] }.join
@@ -59,3 +67,5 @@ end
 And(/^close the browser$/) do
   @browser.close
 end
+
+
