@@ -23,7 +23,7 @@ Feature: testing the search functionality
       Then verify that search pop-up is displayed
       Then verify that Products section is displayed
       And verify that product x-ice is exists in each products name
-
+And close the browser
 
 
 
