@@ -23,5 +23,5 @@ Feature: Wheels By Vehicle and Wheels by Size
     Then select Wheel Diameter
     And verify that CLP is open
     And verify searching Wheels size
+    And close the browser
 
-    Scenario:
