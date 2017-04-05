@@ -91,9 +91,11 @@ And(/^select the option for brand wheel$/) do
    @browser.element(:xpath, ".//*[@class='scrollable menu vertical nested submenu is-accordion-submenu is-active']//li["+(@brand_option_w)+"]/a").click
 <<<<<<< HEAD
    @brand = @browser.element(:xpath, ".//*[@class='scrollable menu vertical nested submenu is-accordion-submenu is-active']//li["+(@brand_option_w)+"]/a").text
- end
+
+  end
 
 Then(/^verify that only products with selected option brand is displayed on the grid$/) do
+<<<<<<< HEAD
   sleep(2)
 =======
    @brand = @browser.element(:xpath, ".//*[@class='selected is-submenu-item is-accordion-submenu-item']").text
@@ -103,6 +105,8 @@ Then(/^verify that only products with selected option brand is displayed on the 
 Then(/^verify that only products with selected option brand is displayed on the grid$/) do
 sleep(2)
 >>>>>>> origin/master
+=======
+>>>>>>> parent of 1a6cf78... from office
   @browser.element(:xpath, "//a[@class='name-link brand-name'][contains(text(), '"+(@brand)+"')]").visible?
 end
 
@@ -125,10 +129,14 @@ end
 
 Then(/^verify that products has selected diameter option on the grid$/) do
 <<<<<<< HEAD
+<<<<<<< HEAD
   @browser.element(:class, "product-attributes").text.include? @diameter
 =======
     @browser.element(:xpath, "//*[@class='product-attributes'][contains(text(), '"+(@diameter_selected)+"')]").visible?
 >>>>>>> origin/master
+=======
+  @browser.element(:class, "product-attributes").include? @diameter
+>>>>>>> parent of 1a6cf78... from office
 end
 
 And(/^uncheck selected option diameter$/) do
