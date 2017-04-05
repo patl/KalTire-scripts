@@ -89,10 +89,10 @@ And(/^select the option for brand wheel$/) do
   sleep(2)
    @browser.element(:xpath, ".//*[@class='scrollable menu vertical nested submenu is-accordion-submenu is-active']//li["+(@brand_option_w)+"]/a").click
    @brand = @browser.element(:xpath, ".//*[@class='scrollable menu vertical nested submenu is-accordion-submenu is-active']//li["+(@brand_option_w)+"]/a").text
-
-  end
+ end
 
 Then(/^verify that only products with selected option brand is displayed on the grid$/) do
+  sleep(2)
   @browser.element(:xpath, "//a[@class='name-link brand-name'][contains(text(), '"+(@brand)+"')]").visible?
 end
 
@@ -111,7 +111,7 @@ And(/^select the option for diameter wheel$/) do
 end
 
 Then(/^verify that products has selected diameter option on the grid$/) do
-  @browser.element(:class, "product-attributes").include? @diameter
+  @browser.element(:class, "product-attributes").text.include? @diameter
 end
 
 And(/^uncheck selected option diameter$/) do

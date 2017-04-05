@@ -5,6 +5,8 @@ require 'watir'
 
 
 Given(/^open the site$/) do
+
+
   @browser = Watir::Browser.new :chrome
   @browser.cookies.clear
   @browser.window.maximize
