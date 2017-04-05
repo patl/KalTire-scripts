@@ -44,7 +44,7 @@ Given(/^open the site$/) do
   brand_option_w = [('1'..'9')].map { |i| i.to_a }.flatten
   @brand_option_w = (0..0).map { brand_option_w[rand(brand_option_w.length)] }.join
 
-  diameter = [('13'..'22')].map { |i| i.to_a }.flatten
+  diameter = [('1'..'9')].map { |i| i.to_a }.flatten
   @diameter= (0..0).map { diameter[rand(diameter.length)] }.join
 
 

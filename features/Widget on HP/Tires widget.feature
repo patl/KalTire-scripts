@@ -97,8 +97,8 @@ Feature: Tires By Vehicle
       Then Verify that Q3 is displayed  In Canada, we recommend changing your tires for the winter to provide superior driving performance in winter road conditions
       When user selects Show me Alternatives
       Then preses on Next button for Qs
-      When verify that CLP is open
-      And verify that All Weather tires are displayed Based in your responses, we recommend All Weather tires.
-      And verify that All Weather tires are displayed in Grid
-
+      #When verify that CLP is open
+      #And verify that All Weather tires are displayed Based in your responses, we recommend All Weather tires.
+     # And verify that All Weather tires are displayed in Grid
+And close the browser
 
