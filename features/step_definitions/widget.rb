@@ -315,7 +315,7 @@ When(/^user is on Q2:  Do you currently put on different tires for the winter\?$
 end
 
 Then(/^select Yes I swap to winter$/) do
-  @browser.element(:xpath, "//*[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li[2]").click
+  @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li").click
 end
 
 
@@ -333,7 +333,7 @@ Then(/^press on Change my responses$/) do
 end
 
 Then(/^select No My vehicle has one$/) do
-  @browser.element(:xpath, "//*[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li[1]").click
+  @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li[2]").click
 end
 
 Then(/^Verify that Q3 is displayed  In Canada, we recommend changing your tires for the winter to provide superior driving performance in winter road conditions$/) do
@@ -341,12 +341,11 @@ Then(/^Verify that Q3 is displayed  In Canada, we recommend changing your tires 
 end
 
 When(/^user selects Show me winter tire$/) do
-  sleep(2)
-  @browser.element(:xpath, "//*[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li[2]").click
+  @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li/p").click
 end
 
 When(/^user selects Show me Alternatives$/) do
-  @browser.element(:xpath, ".//*[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li[1]").click
+  @browser.element(:xpath, "//div[@id='guidedSellingPathWrapper']/div/div[2]/div/ul/li[2]/img").click
 end
 
 And(/^verify that All Weather tires are displayed Based in your responses, we recommend All Weather tires\.$/) do

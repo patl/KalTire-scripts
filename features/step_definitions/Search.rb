@@ -83,24 +83,21 @@ end
 
 And(/^press on Brand filter from Filter result section for wheels$/) do
   @browser.element(:link_text, "Brand").click
-
 end
 
 And(/^select the option for brand wheel$/) do
   sleep(2)
    @browser.element(:xpath, ".//*[@class='scrollable menu vertical nested submenu is-accordion-submenu is-active']//li["+(@brand_option_w)+"]/a").click
-   @brand = @browser.element(:xpath, ".//*[@class='selected is-submenu-item is-accordion-submenu-item']").text
+   @brand = @browser.element(:xpath, ".//*[@class='scrollable menu vertical nested submenu is-accordion-submenu is-active']//li["+(@brand_option_w)+"]/a").text
 
   end
 
 Then(/^verify that only products with selected option brand is displayed on the grid$/) do
-sleep(2)
   @browser.element(:xpath, "//a[@class='name-link brand-name'][contains(text(), '"+(@brand)+"')]").visible?
 end
 
 And(/^uncheck selected option for brand$/) do
   @browser.element(:xpath, ".//*[@class='is-active  scrollable menu vertical nested submenu is-accordion-submenu active-submenu']/li["+(@brand_option_w)+"]/a").click
-  sleep(2)
 end
 
 And(/^press on Diameter filter from Filter result section for wheels$/) do
@@ -109,14 +106,12 @@ And(/^press on Diameter filter from Filter result section for wheels$/) do
 end
 
 And(/^select the option for diameter wheel$/) do
-  sleep(2)
-  @browser.element(:xpath, "html/body/div[1]/div[4]/div[2]/div/div[2]/div/div/div[2]/div[1]/div/div/div[5]/ul/li/ul/li["+(@diameter)+"]/a").click
-  @diameter_selected = @browser.element(:xpath, ".//*[@class='selected is-submenu-item is-accordion-submenu-item']").text
+  @browser.element(:css, "a[title=\"Refine by:"+(@diameter)+"\"] > i.icon-circle-thin").click
 
 end
 
 Then(/^verify that products has selected diameter option on the grid$/) do
-    @browser.element(:xpath, "//*[@class='product-attributes'][contains(text(), '"+(@diameter_selected)+"')]").visible?
+  @browser.element(:class, "product-attributes").include? @diameter
 end
 
 And(/^uncheck selected option diameter$/) do

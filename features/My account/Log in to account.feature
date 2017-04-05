@@ -12,7 +12,6 @@ Background:
     And he press on Log In button from Log In page
     Then user navigates to My account LP verify greeting
     And press on Log Out
-    And close the browser
 
   Scenario: Check the validations on Log In page
     #validations for blank fields
@@ -42,4 +41,3 @@ Background:
     And user fills password on login page
     Then he press on Log In button from Log In page
     And verify the error message Sorry, this does not match our records. Check your spelling and try again.
-    And close the browser

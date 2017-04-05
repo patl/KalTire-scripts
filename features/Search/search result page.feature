@@ -14,7 +14,6 @@ Feature: Search result page
       Then press on Enter/Search
       And verify that Search result page is displayed
       And verify that results on the page are for search word
-      And close the browser
 
       Scenario: check Filter result functionality by brand and diameter wheels
         When user types the Wheels in search field
@@ -29,11 +28,10 @@ Feature: Search result page
         And select the option for brand wheel
         Then verify that only products with selected option brand is displayed on the grid
         And uncheck selected option for brand
-        And press on Brand filter from Filter result section for wheels
         #diameter
         And press on Diameter filter from Filter result section for wheels
         And select the option for diameter wheel
         Then verify that products has selected diameter option on the grid
         And uncheck selected option diameter
-And close the browser
+
 
